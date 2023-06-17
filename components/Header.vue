@@ -182,7 +182,7 @@ export default {
     },
     ubicationsList() {
       axios
-        .get("http://127.0.0.1:8000/")
+        .get("https://www.elpionerodv.cl/")
         .then((respuesta) => {
           this.listUbications = respuesta.data;
         })
