@@ -20,8 +20,11 @@ export default {
     ],
     script: [
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js' },
-      { src: 'https://www.googletagmanager.com/gtag/js?id=G-RCZ6EYBXLP' },
     ]
+  },
+
+  googleAnalytics: {
+    id: 'G-RCZ6EYBXLP', // Reemplaza con tu ID de seguimiento de Google Analytics
   },
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -61,6 +64,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    '@nuxtjs/google-analytics'
+
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -76,5 +81,7 @@ export default {
     baseURL: process.env.BASE_URL || 'https://elpionerodv.cl'
  
 }
+
+
 
 };
