@@ -122,7 +122,7 @@ export default {
       this.page++;
 
       const ubication = this.$route.params.ubication || ''; // Con esto, si el parámetro ubication no está presente en la ruta, se asignará un valor vacío a la variable ubication, evitando así el error de undefined.
-      const url = `http://127.0.0.1:8000/api-murales/${ubication}?page=${this.page}`;
+      const url = `https://elpionerodv.cl/api-murales/${ubication}?page=${this.page}`;
 
 
       let limit = this.arrayList.length + 1;
