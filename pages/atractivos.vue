@@ -126,7 +126,8 @@ export default {
 
 
       let limit = this.arrayList.length + 1;
-      axios.get(url, { params: { limit: limit } }).then((response) => {
+      axios
+      this.$axios.get(url, { params: { limit: limit } }).then((response) => {
         const posts = response.data[1].data;
 
         if (posts.length) {
