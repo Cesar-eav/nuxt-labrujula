@@ -9,7 +9,7 @@
     <div
       class="text-uppercase text-3xl text-center font-bold text-red-400 pt-4 pb-3"
     >
-      Ascensores
+      Ascensores Valparaíso
     </div>
 
     <div

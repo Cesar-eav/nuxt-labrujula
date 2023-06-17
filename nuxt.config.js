@@ -20,6 +20,7 @@ export default {
     ],
     script: [
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js' },
+      { src: 'https://www.googletagmanager.com/gtag/js?id=G-RCZ6EYBXLP' },
     ]
   },
 
