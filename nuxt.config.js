@@ -65,14 +65,14 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: "http://elpionerodv.cl/",
+    baseURL: "https://elpionerodv.cl/",
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
   env: {
-    baseURL: process.env.BASE_URL || 'http://elpionerodv.cl'
+    baseURL: process.env.BASE_URL || 'https://elpionerodv.cl'
  
 }
 
