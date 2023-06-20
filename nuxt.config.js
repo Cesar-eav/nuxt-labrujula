@@ -4,6 +4,7 @@ export default {
     title: "nuxt-brujula4",
     htmlAttrs: {
       lang: "en",
+      
     },
     meta: [
       { charset: "utf-8" },
@@ -20,6 +21,8 @@ export default {
     ],
     script: [
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js' },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js' },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css' }
     ]
   },
 
@@ -31,7 +34,7 @@ export default {
     plugins: [
       { src: '@/plugins/vue-infinite-loading', mode: 'client' },
       { src: '@/plugins/v-viewer', mode: 'client' },
-  
+      { src: '@/plugins/leaflet.js', mode: 'client' }
     ],
 
 
@@ -40,6 +43,11 @@ export default {
       routes.push({
         path: '/atractivos/:ubication?',
         component: resolve(__dirname, 'pages/atractivos.vue')
+      },
+      {
+        path: '/osm/:lat?/:lon?',
+        component: resolve(__dirname, 'pages/Osm.vue')
+
       })
     }
   },
@@ -47,7 +55,7 @@ export default {
   routes: [ ],
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['leaflet/dist/leaflet.css'],
 
 
 
@@ -65,21 +73,23 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
-
+    'nuxt-leaflet',
 
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: "https://elpionerodv.cl/",
+     baseURL: "https://elpionerodv.cl",
+    // baseURL: "http://127.0.0.1:8000"
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
   env: {
-    baseURL: process.env.BASE_URL || 'https://elpionerodv.cl'
+     baseURL: process.env.BASE_URL || 'https://elpionerodv.cl'
+    // baseURL: process.env.BASE_URL || 'http://127.0.0.1:8000'
  
 }
 

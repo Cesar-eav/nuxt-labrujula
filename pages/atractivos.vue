@@ -117,34 +117,38 @@ export default {
   },
 
   methods: {
-    infiniteHandler($state) {
-      console.log('STATE', $state);
-      this.page++;
+  infiniteHandler($state) {
+    console.log('STATE', $state);
+    this.page++;
 
-      const ubication = this.$route.params.ubication || ''; // Con esto, si el parámetro ubication no está presente en la ruta, se asignará un valor vacío a la variable ubication, evitando así el error de undefined.
-      const url = `https://elpionerodv.cl/api-murales/${ubication}?page=${this.page}`;
+    const ubication = this.$route.params.ubication || '';
+    const url = `/api-murales/${ubication}?page=${this.page}`;
 
+    let limit = this.arrayList.length + 1;
 
-      let limit = this.arrayList.length + 1;
-      axios
-      this.$axios.get(url, { params: { limit: limit } }).then((response) => {
-        const posts = response.data[1].data;
+    this.$axios
+      .get(url, { params: { limit: limit } })
+      .then((response) => {
+        console.log(response.data.data)
+        const posts = response.data.data;
 
         if (posts.length) {
-          // Si hay datos en la variable post
           this.arrayList = this.arrayList.concat(posts);
-          console.log('HAY DATOS')
+          console.log('HAY DATOS');
           setTimeout(() => {
             $state.loaded();
-            console.log('CARGADO')
-
+            console.log('CARGADO');
           }, 20);
         } else {
-          // Si NO hay datos, ya finalizó
           $state.complete();
         }
-     });
-    },
+      })
+      .catch((error) => {
+        console.error('Error en infiniteHandler:', error);
+        $state.complete();
+      });
+  },
+},
     closeModal(value) {
     //  El parametro VALUE es el FALSE que se está emitiendo desde componente hijo MODAL.VUE
      this.modal = value;
@@ -154,6 +158,5 @@ export default {
      this.modal = true;
      this.atractivo_modal = data;
     },
-  },
-};
+  }
 </script>

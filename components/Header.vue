@@ -182,7 +182,7 @@ export default {
     },
     ubicationsList() {
       axios
-        .get("https://www.elpionerodv.cl/")
+        .get("http://elpionerodv.cl")
         .then((respuesta) => {
           this.listUbications = respuesta.data;
         })
