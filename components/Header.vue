@@ -187,6 +187,7 @@ export default {
         .get(this.baseurl)
         .then((respuesta) => {
           this.listUbications = respuesta.data;
+          console.log('UBICACION', respuesta.data)
         })
         .catch((error) => {
           console.log("error en LISTTAR SHOW", error);

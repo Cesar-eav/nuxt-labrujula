@@ -34,7 +34,7 @@ export default {
     plugins: [
       { src: '@/plugins/vue-infinite-loading', mode: 'client' },
       { src: '@/plugins/v-viewer', mode: 'client' },
-      { src: '@/plugins/leaflet.js', mode: 'client' }
+      { src: '@/plugins/leaflet.js', mode: 'client', srr:false }
     ],
 
 

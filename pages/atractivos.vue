@@ -1,10 +1,10 @@
 <template>
   <div class="justify-center">
-   <modal-component
+    <modal-component
       :modal="modal"
       :atractivo_modal="atractivo_modal"
       @clicked="closeModal"
-    ></modal-component>
+    />
 
     <div class="flex justify-between my-4 mx-10">
       <p class="font-bold text-2xl text-red-600">Atractivos</p>
@@ -20,11 +20,10 @@
         class="mx-0 md:mx-2 sm:mx-0 bg-red-800 rounded-lg"
         v-for="atractivo in arrayList"
         :key="atractivo.id"
-        
       >
         <div v-if="isMobileAgent">
           <img
-            :src="baseurl+ '/storage/' + atractivo.image"
+            :src="baseurl + '/storage/' + atractivo.image"
             alt="imagen"
             class="w-full h-60 rounded-lg"
           />
@@ -34,7 +33,7 @@
         <div v-else v-viewer>
           <div>
             <img
-              :src="baseurl+'/storage/' + atractivo.image"
+              :src="baseurl + '/storage/' + atractivo.image"
               alt="imagen"
               class="w-full h-60 rounded-lg"
             />
@@ -67,8 +66,6 @@
   </div>
 </template>
 
-
-
 <style>
 .active {
   background-color: blue;
@@ -81,27 +78,27 @@
 import axios from "axios";
 import ModalComponent from "@/components/Modal.vue";
 
+
+
 export default {
   layout: "Default",
 
   data() {
     return {
       arrayList: [],
-      infiniteId:1,
-      page:1,
+      infiniteId: 1,
+      page: 1,
       cerro: "",
       modal: false,
       atractivo_modal: "",
-      baseurl : process.env.baseURL
-
+      baseurl: process.env.baseURL,
     };
   },
 
   components: {
     ModalComponent,
-    // InfiniteLoading,
+    //InfiniteLoading,
   },
-
 
   computed: {
     isMobileAgent() {
@@ -112,51 +109,60 @@ export default {
     },
   },
 
-  created(){
-    
+  created() {},
+
+  mounted() {
+    this.infiniteHandler();
   },
 
   methods: {
-  infiniteHandler($state) {
-    console.log('STATE', $state);
-    this.page++;
-
-    const ubication = this.$route.params.ubication || '';
-    const url = `/api-murales/${ubication}?page=${this.page}`;
-
-    let limit = this.arrayList.length + 1;
-
-    this.$axios
-      .get(url, { params: { limit: limit } })
-      .then((response) => {
-        console.log(response.data.data)
-        const posts = response.data.data;
-
-        if (posts.length) {
-          this.arrayList = this.arrayList.concat(posts);
-          console.log('HAY DATOS');
-          setTimeout(() => {
-            $state.loaded();
-            console.log('CARGADO');
-          }, 20);
-        } else {
-          $state.complete();
-        }
-      })
-      .catch((error) => {
-        console.error('Error en infiniteHandler:', error);
-        $state.complete();
-      });
-  },
-},
     closeModal(value) {
-    //  El parametro VALUE es el FALSE que se está emitiendo desde componente hijo MODAL.VUE
-     this.modal = value;
-     console.log("CLOSE MODAL");
+      //El parametro VALUE es el FALSE que se está emitiendo desde componente hijo MODAL.VUE
+      this.modal = value;
+      console.log("CLOSE MODAL");
     },
+
     openModal(data) {
-     this.modal = true;
-     this.atractivo_modal = data;
+    this.modal = true;
+    this.atractivo_modal = data;
+  },
+
+
+
+
+    infiniteHandler($state) {
+      console.log("STATE", $state);
+      this.page++;
+
+      const ubication = this.$route.params.ubication || " ";
+      const url = `/api-murales/${ubication}?page=${this.page}`;
+
+      let limit = this.arrayList.length + 1;
+      axios;
+      this.$axios
+        .get(url, { params: { limit: limit } })
+        .then((response) => {
+          console.log(response.data.data);
+          const posts = response.data.data;
+
+          if (posts.length) {
+            this.arrayList = this.arrayList.concat(posts);
+            console.log("HAY DATOS");
+            setTimeout(() => {
+              $state.loaded();
+              console.log("CARGADO");
+            }, 20);
+          } else {
+            $state.complete();
+          }
+        })
+        .catch((error) => {
+          console.error("Error en infiniteHandler:", error);
+          $state.complete();
+        });
     },
-  }
+  },
+
+
+};
 </script>
