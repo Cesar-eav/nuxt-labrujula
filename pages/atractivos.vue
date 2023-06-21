@@ -24,7 +24,7 @@
       >
         <div v-if="isMobileAgent">
           <img
-            :src="'http://127.0.0.1:8000/storage/' + atractivo.image"
+            :src="baseurl+ '/storage/' + atractivo.image"
             alt="imagen"
             class="w-full h-60 rounded-lg"
           />

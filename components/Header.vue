@@ -166,6 +166,8 @@ export default {
     return {
       listUbications: [],
       showMenu: false,
+      baseurl : process.env.baseURL
+
     };
   },
 
@@ -182,7 +184,7 @@ export default {
     },
     ubicationsList() {
       axios
-        .get("http://elpionerodv.cl")
+        .get(this.baseurl)
         .then((respuesta) => {
           this.listUbications = respuesta.data;
         })
