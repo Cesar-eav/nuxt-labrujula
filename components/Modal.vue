@@ -57,7 +57,7 @@
                 
                 
                   <img
-                  :src="`http://127.0.0.1:8000/storage/${atractivo_modal.image}`"
+                  :src="baseurl+ '/storage/'+atractivo_modal.image"
                   alt="imagen"
                   />
                   <div v-html="atractivo_modal.description" class="text-justify"></div>
@@ -94,6 +94,8 @@ export default {
       arrayList: [],
       page: 0,
       cerro: "",
+      baseurl: process.env.baseURL
+
     };
   },
 
