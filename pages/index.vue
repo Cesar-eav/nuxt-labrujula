@@ -58,7 +58,7 @@
         />
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">
-            <a href="/murales">Murales</a>
+            <a href="/atractivos">Murales</a>
           </div>
           <p class="text-gray-700 text-base">
             Con más de 400 murales, Valparaíso es la capital del arte urbano de

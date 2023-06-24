@@ -134,15 +134,18 @@ export default {
       console.log("STATE", $state);
       this.page++;
 
-      const ubication = this.$route.params.ubication || " ";
+      const ubication = this.$route.params.ubication || "";
       const url = `/api-murales/${ubication}?page=${this.page}`;
+      console.log('URL',url);
+      console.log('UBICATION',ubication);
 
       let limit = this.arrayList.length + 1;
-      axios;
+ 
       this.$axios
         .get(url, { params: { limit: limit } })
         .then((response) => {
-          console.log(response.data.data);
+     
+          console.log('ATRACTIVOS: ',response.data.data);
           const posts = response.data.data;
 
           if (posts.length) {

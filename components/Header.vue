@@ -76,11 +76,11 @@
                   aria-labelledby="dropdownLargeButton"
                 >
                   <li v-for="ubication in listUbications" :key="ubication.id">
-                    <a
-                      :href="'/atractivos/' + ubication.name"
+                    <nuxt-link
+                      :to="'/atractivos/' + ubication.name"
                       class="Sub-menu block hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >{{ ubication.name }}</a
-                    >
+                      {{ ubication.name }}
+                  /> 
                   </li>
                 </ul>
               </div>
