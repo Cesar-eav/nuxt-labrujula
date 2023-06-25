@@ -31,7 +31,7 @@ export default {
     ],
   },
 
-  //target : "static",
+  target : "static",
 
   googleAnalytics: {
     id: "G-RCZ6EYBXLP", // Reemplaza con tu ID de seguimiento de Google Analytics
