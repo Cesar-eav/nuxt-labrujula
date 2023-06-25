@@ -7,9 +7,9 @@
     />
 
     <div class="flex justify-between my-4 mx-10">
-      <p class="font-bold text-2xl text-red-600">Atractivos</p>
+      <p class="font-bold text-2xl text-red-600">Atractivos </p>
       <p class="text-uppercase text-3xl font-bold text-red-400">
-        {{ this.$route.params.ubication }}
+        <!-- {{ ubicacion }} -->
       </p>
     </div>
 

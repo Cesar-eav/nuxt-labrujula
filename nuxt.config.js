@@ -47,11 +47,7 @@ export default {
   router: {
     extendRoutes(routes, resolve) {
       routes.push(
-        {
-          name: 'atractivos-ubication',
-          path: '/atractivos/:ubication?',
-          component: resolve(__dirname, 'pages/atractivos/_ubication.vue')
-        },
+
         {
           path: "/osm/:lat?/:lon?",
           component: resolve(__dirname, "pages/Osm.vue"),
