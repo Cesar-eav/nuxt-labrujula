@@ -1,7 +1,7 @@
 module.exports = {
     apps: [
         {
-            name: 'nuxt-brujula4s',
+            name: 'nuxt-brujula4',
             script: './start.js',
             env: {
                 HOST: 'localhost',
