@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/Escaleras", {data:[{}],fetch:{},mutations:void 0});

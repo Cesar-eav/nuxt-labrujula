@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/atractivos", {data:[{}],fetch:{},mutations:void 0});

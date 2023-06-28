@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/Osm", {data:[{}],fetch:{},mutations:void 0});

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/CentrosCulturales", {data:[{}],fetch:{},mutations:void 0});
