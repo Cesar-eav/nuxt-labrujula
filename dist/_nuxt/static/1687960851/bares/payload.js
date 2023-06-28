@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/bares", {data:[{}],fetch:{},mutations:void 0});
