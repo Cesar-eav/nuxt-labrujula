@@ -87,7 +87,7 @@ export default {
     return {
       arrayList: [],
       infiniteId: 1,
-      page: 1,
+      page: 0,
       cerro: "",
       modal: false,
       atractivo_modal: "",
