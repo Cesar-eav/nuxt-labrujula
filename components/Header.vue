@@ -87,7 +87,7 @@
               </div>
             </li>
             <li>
-              <a href="/atractivos" class="menuPrincipal">SPOTO</a>
+              <a href="/atractivos" class="menuPrincipal">Street Art</a>
             </li>
             <li>
               <a href="/artistas" class="menuPrincipal">Artistas</a>
