@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "nuxt-brujula4",
+    title: "LaBrujula.Tk",
     htmlAttrs: {
       lang: "en",
     },
@@ -12,7 +12,7 @@ export default {
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "icon", type: "image/x-icon", href: "/favicon-16x16.png" },
       {
         rel: "stylesheet",
         href: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css",
@@ -48,10 +48,10 @@ export default {
     extendRoutes(routes, resolve) {
       routes.push(
 
-        {
-          path: "/osm/:lat?/:lon?",
-          component: resolve(__dirname, "pages/Osm.vue"),
-        }
+        // {
+        //   path: "/osm/:lat?/:lon?",
+        //   component: resolve(__dirname, "pages/Osm.vue"),
+        // }
       );
     },
   },
