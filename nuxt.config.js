@@ -48,10 +48,10 @@ export default {
     extendRoutes(routes, resolve) {
       routes.push(
 
-        // {
-        //   path: "/osm/:lat?/:lon?",
-        //   component: resolve(__dirname, "pages/Osm.vue"),
-        // }
+        {
+          path: "/:lat/:lon",
+          component: resolve(__dirname, "pages/ascensores/_id.vue"),
+        }
       );
     },
   },

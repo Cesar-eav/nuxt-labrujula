@@ -9,36 +9,42 @@
     <div
       class="text-uppercase text-3xl text-center font-bold text-red-400 pt-4 pb-3"
     >
-      Miradores
+      Ascensores Valparaíso
     </div>
 
-    <div v-viewer class="flex flex-wrap justify-center md:px-0 px-2">
+    <div
+      class="grid grid-cols-1 md:grid-cols-3 md:mx-10 sm:mx-0 md:gap-5 gap-y-5 justify-center md:px-0 px-2"
+    >
       <div
-        class="w-96 mx-1 mb-2 bg-red-800 rounded-lg"
-        v-for="miradores in arrayList"
-        :key="miradores.id"
+        class="mx-0 md:mx-2 sm:mx-0 bg-red-800 rounded-lg"
+        v-for="ascensores in arrayList"
+        :key="ascensores.id"
       >
-        <img
-          :src="baseurl + '/storage/' + miradores.image"
-          class="rounded-lg"
-        />
+        <p class="text-xl text-red-200 text-center py-2 uppercase font-bold">
+          Ascensor {{ ascensores.nombre }}
+        </p>
+
+        <img :src="baseurl + '/storage/' + ascensores.image" />
 
         <div class="flex justify-between">
           <button
-            @click="openModal(miradores)"
+            @click="openModal(ascensores)"
             class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm py-2 px-2 mr-3 my-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             type="button"
           >
-            Más información
+            Más información 
           </button>
 
-          <a
+          <nuxt-link
             class="block text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm py-2 px-2 mr-3 my-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            type="button"
-            :href="'/' + miradores.lat + '/' + miradores.lon"
-            target="blank"
-            >Ir al mapa</a
+            :to="'/'+ascensores.lat+'/'+ascensores.lon"
+            :lat="ascensores.lat"
+            :lon="ascensores.lon"
           >
+            Ir al mapa
+          </nuxt-link>
+
+
         </div>
       </div>
     </div>
@@ -47,7 +53,9 @@
 
 <script>
 import axios from "axios";
-import ModalComponent from "@/components/Modal.vue";
+import ModalAscensores from "@/components/ModalAscensores.vue";
+import Osm from "@/components/osm.vue";
+import Id from "@/pages/ascensores/_id.vue";
 
 export default {
   layout: "Default",
@@ -55,28 +63,35 @@ export default {
   data() {
     return {
       arrayList: [],
-      page: 0,
-      cerro: "",
       modal: false,
       atractivo_modal: "",
       baseurl: process.env.baseURL,
     };
   },
   components: {
-    ModalComponent,
+    ModalAscensores,
+    Osm,
+    Id
   },
 
   mounted() {
-    this.listMiradores();
+    this.listAscensores();
   },
   methods: {
-    listMiradores() {
+    listAscensores() {
       axios;
+
       this.$axios
-        .get("api-miradores") // Va a web.php por defecto y busca el nombre de la ruta que arroja el JSON
-        .then((respuesta) => (this.arrayList = respuesta.data));
-      //     console.log('arrayList', this.arrayList);
-      // }).catch(error => { console.log('error en LISTTAR SHOW', error) })
+        .get("/api-ascensores")
+        .then((respuesta) => {
+          this.arrayList = respuesta.data;
+          console.log("RESPONSE", respuesta.data);
+          console.log("URL", respuesta.config.url);
+          console.log("BASE", respuesta.config.baseURL);
+        })
+        .catch((error) => {
+          console.error("Error en listAscensores:", error);
+        });
     },
     closeModal(value) {
       //El parametro VALUE es el FALSE que se está emitiendo desde componente hijo MODAL.VUE
