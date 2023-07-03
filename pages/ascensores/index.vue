@@ -40,6 +40,7 @@
             :to="'/'+ascensores.lat+'/'+ascensores.lon"
             :lat="ascensores.lat"
             :lon="ascensores.lon"
+            target="_blank"
           >
             Ir al mapa
           </nuxt-link>
