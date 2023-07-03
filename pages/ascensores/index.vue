@@ -1,6 +1,6 @@
 <template>
   <div class="justify-center">
-    <modal-component
+    <modal-ascensores
       :modal="modal"
       :atractivo_modal="atractivo_modal"
       @clicked="closeModal"

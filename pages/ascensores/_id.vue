@@ -1,9 +1,7 @@
 <template>
 <div>
 
-
-<Osm :lat=this.$route.params.lat :lon=this.$route.params.lon />
-
+  <Osm :lat=this.$route.params.lat :lon=this.$route.params.lon />
 
 </div>
 </template>
