@@ -31,7 +31,7 @@ export default {
     ],
   },
 
-  target : "static",
+  target : "server",
 
   googleAnalytics: {
     id: "G-RCZ6EYBXLP", // Reemplaza con tu ID de seguimiento de Google Analytics
@@ -51,10 +51,10 @@ export default {
         {
           path: '/:lat/:lon',
           component: resolve(__dirname, "components/osm.vue"),
-          // validate: {
-          //   lat: /^\d+(\.\d+)?$/,
-          //   lon: /^\d+(\.\d+)?$/
-          // }
+          validate: {
+            lat: /^\d+(\.\d+)?$/,
+            lon: /^\d+(\.\d+)?$/
+          }
         }
       );
     },
