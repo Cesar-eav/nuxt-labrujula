@@ -49,7 +49,7 @@
             Más información
           </button>
 
-        <nuxt-link
+        <!-- <nuxt-link
             class="block px-2 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm py-2 my-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             type="button"
             :to="'/' + atractivo.lat + '/' + atractivo.lon"
@@ -58,7 +58,7 @@
             :lon="atractivo.lon"
           >
             Ir al mapa
-          </nuxt-link> 
+          </nuxt-link>  -->
         </div>
       </div>
     </div>
