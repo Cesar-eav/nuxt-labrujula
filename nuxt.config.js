@@ -50,7 +50,7 @@ export default {
 
         {
           path: "/:lat/:lon",
-          component: resolve(__dirname, "pages/ascensores/_id.vue"),
+          component: resolve(__dirname, "components/osm.vue"),
         }
       );
     },
