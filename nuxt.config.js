@@ -49,8 +49,12 @@ export default {
       routes.push(
 
         {
-          path: "/:lat/:lon",
+          path: '/:lat/:lon',
           component: resolve(__dirname, "components/osm.vue"),
+          // validate: {
+          //   lat: /^\d+(\.\d+)?$/,
+          //   lon: /^\d+(\.\d+)?$/
+          // }
         }
       );
     },
