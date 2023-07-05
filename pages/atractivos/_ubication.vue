@@ -129,12 +129,15 @@ export default {
     this.atractivo_modal = data;
   },
 
+
+
+
     infiniteHandler($state) {
       console.log("STATE", $state);
       this.page++;
 
       const ubication = this.$route.params.ubication || "";
-      const url = '/api-murales/${ubication}?page='+this.page;
+      const url = `/api-murales/${ubication}?page=${this.page}`;
       console.log('URL',url);
       console.log('UBICATION',ubication);
 
