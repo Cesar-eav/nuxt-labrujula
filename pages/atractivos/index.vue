@@ -64,6 +64,8 @@
     </div>
 
     <infinite-loading @infinite="infiniteHandler" :identifier="infiniteId">
+      <div slot="Hemos llegado al final"></div>
+      <div slot="No hay datos"></div>
     </infinite-loading>
   </div>
 </template>
@@ -79,7 +81,6 @@
 <script>
 import axios from "axios";
 import ModalComponent from "@/components/Modal.vue";
-
 
 
 export default {
@@ -98,8 +99,7 @@ export default {
   },
 
   components: {
-    ModalComponent,
-    //InfiniteLoading,
+    ModalComponent
   },
 
   computed: {
@@ -129,19 +129,19 @@ export default {
     this.atractivo_modal = data;
   },
 
-
-
-
     infiniteHandler($state) {
       console.log("STATE", $state);
-      this.page++;
+      this.page = this.page + 1;
+      console.log("PAGE + ", this.page);
 
       const ubication = this.$route.params.ubication || "";
-      const url = '/api-murales?page='+this.page;
+      const url = `/api-murales?page=${this.page}`; 
       console.log('URL',url);
       console.log('UBICATION',ubication);
 
       let limit = this.arrayList.length + 1;
+      console.log("PAGE + ", limit);
+
  
       this.$axios
         .get(url, { params: { limit: limit } })
