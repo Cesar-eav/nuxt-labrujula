@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <nav class="px-2 bg-red-500 text-gray-200 shadow-lg p-3">
       <div
         class="container flex flex-wrap md:justify-start justify-between items-center mx-auto"
@@ -39,6 +40,7 @@
             <li>
               <button
                 id="dropdownNavbarLink"
+                @click ="closeMobileMenu"
                 data-dropdown-toggle="dropdownNavbar"
                 class="CERROS flex justify-between text-sm items-left py-2 pr-4 pl-3 w-full font-medium text-white rounded hover:bg-red-600 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 md:w-auto dark:text-red-600 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
               >
@@ -75,13 +77,12 @@
                   class="py-1 text-sm text-gray-700 dark:text-gray-400"
                   aria-labelledby="dropdownLargeButton"
                 >
-                  <li v-for="ubication in listUbications" :key="ubication.id">
+                  <li @click ="toggleMenu" v-for="ubication in listUbications" :key="ubication.id">
   
-                    <nuxt-link
-                    :to="{ name: 'atractivos-ubication', params: { ubication: ubication.name } }"
-                      class="Sub-menu block hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      
-                  > {{ubication.name}} </nuxt-link> 
+                    <a  :href="`/atractivos/${ubication.name}`" 
+                    class="Sub-menu block hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                      {{ubication.name}}                                    
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -93,7 +94,7 @@
               <a href="/artistas" class="menuPrincipal">Artistas</a>
             </li>
             <li>
-              <a href="/ascensores" class="menuPrincipal">Ascensores</a>
+              <nuxt-link to="/ascensores" class="menuPrincipal">Ascensores</nuxt-link>
             </li>
             <li>
               <a href="/escaleras" class="menuPrincipal">Escaleras</a>
@@ -166,7 +167,7 @@ export default {
   data() {
     return {
       listUbications: [],
-      showMenu: false,
+      showMenu: true,
       baseurl : process.env.baseURL
 
     };
@@ -178,11 +179,14 @@ export default {
 
   methods: {
     toggleMenu() {
-      this.showMenu = !this.showMenu;
+      this.showMenu = true;
+      console.log('TOOGLE----------->', this.showMenu)
     },
-    toggleMobileMenu() {
-      // Logic for toggling the mobile menu
-    },
+    closeMobileMenu() {
+      //this.showMenu = false;
+      console.log('MOBIL------------>',   this.showMenu)
+
+        },
     ubicationsList() {
       axios
         .get(this.baseurl)
