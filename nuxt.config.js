@@ -28,18 +28,19 @@ export default {
       {
         src: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css",
       },
+      
     ],
   },
 
   target : "server",
 
   googleAnalytics: {
-    id: process.env.G-RCZ6EYBXLP, // Reemplaza con tu ID de seguimiento de Google Analytics
+    id: "G-RCZ6EYBXLP" // Reemplaza con tu ID de seguimiento de Google Analytics
   },
 
   publicRuntimeConfig: {
     googleAnalytics: {
-      id: process.env.G-RCZ6EYBXLP
+      id: "G-RCZ6EYBXLP"
     }
   },
 
@@ -48,6 +49,8 @@ export default {
     { src: "@/plugins/vue-infinite-loading", mode: "client" },
     { src: "@/plugins/v-viewer", mode: "client" },
     { src: "@/plugins/leaflet.js", mode: "client", srr: false },
+    { src: '@/plugins/ga.js', mode: 'client'}
+
   ],
 
   router: {
