@@ -14,7 +14,10 @@
         v-for="atractivo in arrayList"
         :key="atractivo.id"
       >
-        <img :src="baseurl+'/storage/' + atractivo.image" class="md:h-60 w-full rounded-lg"  />
+      <p class="text-white text-xl mx-2">Cerro {{ atractivo.ubication }}</p>
+      <p class="text-white text-md mx-2">Calle {{ atractivo.direction }}</p>
+
+        <img :src="baseurl+'/storage/' + atractivo.image" class="md:h-60 w-full"  />
 
         <div class="flex justify-between">
           <button
