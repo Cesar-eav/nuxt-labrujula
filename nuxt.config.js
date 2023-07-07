@@ -1,4 +1,8 @@
 export default {
+
+
+  target : "server",
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "LaBrujula.Tk",
@@ -32,7 +36,6 @@ export default {
     ],
   },
 
-  target : "server",
 
   googleAnalytics: {
     id: "G-RCZ6EYBXLP" // Reemplaza con tu ID de seguimiento de Google Analytics
