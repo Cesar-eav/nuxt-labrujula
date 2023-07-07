@@ -34,7 +34,13 @@ export default {
   target : "server",
 
   googleAnalytics: {
-    id: "G-RCZ6EYBXLP", // Reemplaza con tu ID de seguimiento de Google Analytics
+    id: process.env.G-RCZ6EYBXLP, // Reemplaza con tu ID de seguimiento de Google Analytics
+  },
+
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.G-RCZ6EYBXLP
+    }
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
