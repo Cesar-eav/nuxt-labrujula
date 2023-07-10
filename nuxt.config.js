@@ -37,14 +37,18 @@ export default {
   },
 
 
-  googleAnalytics: {
-    id: "G-RCZ6EYBXLP" // Reemplaza con tu ID de seguimiento de Google Analytics
-  },
+  // googleAnalytics: {
+  //   id: "G-RCZ6EYBXLP" // Reemplaza con tu ID de seguimiento de Google Analytics
+  // },
 
-  publicRuntimeConfig: {
-    googleAnalytics: {
-      id: "G-RCZ6EYBXLP"
-    }
+  // publicRuntimeConfig: {
+  //   googleAnalytics: {
+  //     id: "G-RCZ6EYBXLP"
+  //   }
+  // },
+
+  env: {
+    googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
