@@ -7,14 +7,14 @@
       >
         <a href="/" class="flex items-center">
           <span
-            class="self-center text-xl font-semibold whitespace-nowrap md:hover:text-gray-100 dark:text-white"
+            class="self-center text-xl font-semibold whitespace-nowrap"
             >La Brújula</span
           >
         </a>
         <button
           data-collapse-toggle="mobile-menu"
           type="button"
-          class="inline-flex justify-center items-center ml-3 text-white rounded-lg md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-500"
+          class="inline-flex justify-center items-center ml-3 text-white rounded-lg md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
           aria-controls="mobile-menu-2"
           aria-expanded="false"
         >
@@ -35,14 +35,14 @@
         </button>
         <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
           <ul
-            class="Menu-Escritorio flex flex-col p-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            class="Menu-Escritorio flex flex-col p-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
           >
             <li>
               <button
                 id="dropdownNavbarLink"
                 @click ="closeMobileMenu"
                 data-dropdown-toggle="dropdownNavbar"
-                class="CERROS flex justify-between text-sm items-left py-2 pr-4 pl-3 w-full font-medium text-white rounded hover:bg-red-600 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 md:w-auto dark:text-red-600 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                class="CERROS flex justify-between text-sm items-left py-2 pr-4 pl-3 w-full font-medium text-white rounded hover:bg-red-600 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 md:w-auto "
               >
                 Cerros
                 <svg
@@ -62,7 +62,7 @@
               <!-- Dropdown menu -->
               <div
                 id="dropdownNavbar"
-                class="LISTADO hidden w-44 font-normal bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                class="LISTADO hidden w-44 font-normal bg-white rounded divide-y divide-gray-100 shadow"
                 style="
                   position: absolute;
                   inset: 0px auto auto -92px !important;
@@ -74,13 +74,13 @@
                 data-popper-placement="bottom"
               >
                 <ul
-                  class="py-1 text-sm text-gray-700 dark:text-gray-400"
+                  class="py-1 text-sm text-gray-700"
                   aria-labelledby="dropdownLargeButton"
                 >
                   <li @click ="toggleMenu" v-for="ubication in listUbications" :key="ubication.id">
   
                     <a  :href="`/atractivos/${ubication.name}`" 
-                    class="Sub-menu block hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                    class="Sub-menu block hover:bg-gray-100 ">
                       {{ubication.name}}                                    
                     </a>
                   </li>
