@@ -123,6 +123,9 @@
             <li>
               <a href="/bares" class="menuPrincipal">Bares</a>
             </li>
+                        <li>
+              <a href="/servicios" class="menuPrincipal">Servicios</a>
+            </li>
 
             <li v-if="false">
               <a href="/crud/index" class="menuPrincipal block py-2">CRUD</a>
