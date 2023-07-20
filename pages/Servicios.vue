@@ -26,11 +26,13 @@
             <p class="font-bold">Puntos de Información Turística</p>
                 <a href="https://goo.gl/maps/dbNiUaG4PksNXT6p9" target="_blank"><li>Muelle Prat</li></a>
                 <a href="https://goo.gl/maps/zNApord6HE1Kx4Ws8" target="_blank"><li>Pergola de las Flores </li></a>
-                <a href="https://goo.gl/maps/Scnn4bnfLXJZseSx5" target="_blank"><li>Paseo Dimalow</li></a>
+                <a href="https://goo.gl/maps/aJXxam8y1YePvbvp9" target="_blank"><li>Paseo Dimalow</li></a>
                 <a href="https://goo.gl/maps/7bb8vuzuaMwK8RKSA" target="_blank"><li>Terminal de buses</li></a>
                 <a href="https://goo.gl/maps/zX8hyZCLT6YT87Wv9" target="_blank"><li>Plaza O'Higgins</li></a>
-                <div class="bg-red-700 w-full text-center text-white rounded-lg py-2 ">MAPA</div>
-   
+          <a href="https://www.google.com/maps/d/u/0/edit?mid=198d93NMjyRCLRvG_VMgveaE06QpVuSw&usp=sharing"  target="_blank" 
+          class="bg-red-700 w-full text-center text-white rounded-lg py-1 my-4 ">
+          <p >MAPA</p>
+          </a>   
         </div>
         <div class="bg-red-400 rounded-lg p-4 flex flex-col justify-center items-center">
           <i class="fas fa-toilet fa-3x"></i>
@@ -46,7 +48,10 @@
           <a href="https://goo.gl/maps/7bb8vuzuaMwK8RKSA" target="_blank"><li>Terminal de buses: $350</li></a>
           <a href="https://goo.gl/maps/LLGYtTBvuLvvSg9L7" target="_blank"><li>Mercado Cardonal: $300</li></a>
           <a href="https://goo.gl/maps/4oGNDTWk4BVUzSeb8" target="_blank"><li>Muelle Barón: $300</li></a>
-          <div class="bg-red-700 w-full text-center text-white rounded-lg py-2 ">MAPA</div>
+          <a href="https://www.google.com/maps/d/u/0/edit?mid=198d93NMjyRCLRvG_VMgveaE06QpVuSw&usp=sharing"  target="_blank" 
+          class="bg-red-700 w-full text-center text-white rounded-lg py-1 my-4 ">
+          <p >MAPA</p>
+          </a>
         </div>
   
 
@@ -57,8 +62,10 @@
             <a href="https://goo.gl/maps/P7R2JzBtiNPRRWyn6" target="_blank">Mirador Santiago Wanderes</a>
             <a href="https://goo.gl/maps/7a1RPxSf5y6bHHMX6" target="_blank">Mirador Cerro La Cruz</a>
             <a href="https://goo.gl/maps/imjWPB6eiSfmFrTD6" target="_blank">Parque Merced</a>
-            <div class="bg-red-700 w-full text-center text-white rounded-lg py-2 ">MAPA</div>
-
+          <a href="https://www.google.com/maps/d/u/0/edit?mid=198d93NMjyRCLRvG_VMgveaE06QpVuSw&usp=sharing"  target="_blank" 
+          class="bg-red-700 w-full text-center text-white rounded-lg py-1 my-4 ">
+          <p >MAPA</p>
+          </a>
 
         </div>
       </div>
