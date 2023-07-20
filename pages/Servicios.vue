@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center">
+  <div class="flex flex-col justify-center mx-2">
     <modal-component
       :modal="modal"
       :atractivo_modal="atractivo_modal"
@@ -18,12 +18,12 @@
     </p>
 
     <div class="container mx-auto px-4">
-      <div class="grid grid-cols-3 gap-4 items-start">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
         <!-- Columna 1 -->
         <div class="bg-red-400 rounded-lg p-4 flex  flex-col justify-center items-center align-middle	">
       
             <i class="far fa-question-circle fa-3x"></i>
-            <p class="font-bold">Puntos de Información</p>
+            <p class="font-bold">Puntos de Información Turística</p>
                 <a href="https://goo.gl/maps/dbNiUaG4PksNXT6p9" target="_blank"><li>Muelle Prat</li></a>
                 <a href="https://goo.gl/maps/zNApord6HE1Kx4Ws8" target="_blank"><li>Pergola de las Flores </li></a>
                 <a href="https://goo.gl/maps/Scnn4bnfLXJZseSx5" target="_blank"><li>Paseo Dimalow</li></a>
@@ -32,9 +32,7 @@
                 <div class="bg-red-700 w-full text-center text-white rounded-lg py-2 ">MAPA</div>
    
         </div>
-        <div
-          class="bg-red-400 rounded-lg p-4 flex flex-col justify-center items-center"
-        >
+        <div class="bg-red-400 rounded-lg p-4 flex flex-col justify-center items-center">
           <i class="fas fa-toilet fa-3x"></i>
           <p class="font-bold">Baños</p>
           <a href="https://goo.gl/maps/VjqKsUNR3TL1W5W48" target="_blank"><li>Mercado Puerto: $300</li></a>
@@ -53,12 +51,15 @@
   
 
         <!-- Columna 2 -->
-        <div class="bg-white rounded-lg p-4 flex justify-center items-center">
-          <div>
+        <div class="bg-red-400 rounded-lg p-4 flex flex-col justify-center items-center">
             <i class="fas fa-bicycle fa-3x"></i>
+            <p class="font-bold">Bicicleteros</p>
+            <a href="https://goo.gl/maps/P7R2JzBtiNPRRWyn6" target="_blank">Mirador Santiago Wanderes</a>
+            <a href="https://goo.gl/maps/7a1RPxSf5y6bHHMX6" target="_blank">Mirador Cerro La Cruz</a>
+            <a href="https://goo.gl/maps/imjWPB6eiSfmFrTD6" target="_blank">Parque Merced</a>
+            <div class="bg-red-700 w-full text-center text-white rounded-lg py-2 ">MAPA</div>
 
-            <p>Bicicleteros</p>
-          </div>
+
         </div>
       </div>
     </div>
