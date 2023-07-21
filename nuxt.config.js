@@ -12,7 +12,7 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "Encuentra todos los tesoros de Valparaiso. Murales, escaleras, ascensores, street art, cerro alegre, cerro concepción." },
+      { hid: "description", name: "description", content: "Valparaiso, murales, escaleras, ascensores, street art, cerro alegre, cerro concepción." },
       { name: 'keywords', content: 'Valparaíso, murales, street art, ascensor artilleria, ascensores, cerro concepción, cerro alegre' },
       { name: "format-detection", content: "telephone=no" },
 
