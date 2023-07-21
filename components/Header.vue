@@ -188,7 +188,7 @@ export default {
         },
     ubicationsList() {
       axios
-        .get(this.baseurl)
+        .get("https://www.elpionerodv.cl/api-ubications")
         .then((respuesta) => {
           this.listUbications = respuesta.data;
         })
