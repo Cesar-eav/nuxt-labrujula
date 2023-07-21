@@ -59,15 +59,23 @@
         <div class="bg-red-400 rounded-lg p-4 flex flex-col justify-center items-center">
             <i class="fas fa-bicycle fa-3x"></i>
             <p class="font-bold">Bicicleteros</p>
-            <a href="https://goo.gl/maps/P7R2JzBtiNPRRWyn6" target="_blank">Mirador Santiago Wanderes</a>
-            <a href="https://goo.gl/maps/7a1RPxSf5y6bHHMX6" target="_blank">Mirador Cerro La Cruz</a>
-            <a href="https://goo.gl/maps/imjWPB6eiSfmFrTD6" target="_blank">Parque Merced</a>
+            <a href="https://goo.gl/maps/P7R2JzBtiNPRRWyn6" target="_blank"><li>Mirador Santiago Wanderes</li></a>
+            <a href="https://goo.gl/maps/7a1RPxSf5y6bHHMX6" target="_blank"><li>Mirador Cerro La Cruz</li></a>
+            <a href="https://goo.gl/maps/imjWPB6eiSfmFrTD6" target="_blank"><li>Parque Merced</li></a>
           <a href="https://www.google.com/maps/d/u/0/edit?mid=198d93NMjyRCLRvG_VMgveaE06QpVuSw&usp=sharing"  target="_blank" 
           class="bg-red-700 w-full text-center text-white rounded-lg py-1 my-4 ">
           <p >MAPA</p>
           </a>
-
         </div>
+
+        <div class="bg-red-400 rounded-lg p-4 flex flex-col justify-center items-center">
+<i class='fas fa-tools fa-3x'></i>
+            <p class="font-bold">Talleres de Bicicletas</p>
+            <a href="https://www.mikebikes.cl/" target="_blank"><li>Bicium</li></a>
+            <a href="https://www.bicium.cl/" target="_blank"><li>Mike Bikes</li></a>
+  
+        </div>
+
       </div>
     </div>
   </div>
