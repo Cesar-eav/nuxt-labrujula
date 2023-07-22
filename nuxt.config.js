@@ -42,17 +42,6 @@ export default {
     ],
   },
 
-
-  // googleAnalytics: {
-  //   id: "G-RCZ6EYBXLP" // Reemplaza con tu ID de seguimiento de Google Analytics
-  // },
-
-  // publicRuntimeConfig: {
-  //   googleAnalytics: {
-  //     id: "G-RCZ6EYBXLP"
-  //   }
-  // },
-
   env: {
     googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
   },
@@ -102,7 +91,13 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     "nuxt-leaflet",
+    'vue-geolocation-api/nuxt',
+
   ],
+
+  geolocation:  {
+    watch: true,
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
