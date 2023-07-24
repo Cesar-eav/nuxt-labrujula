@@ -17,6 +17,7 @@
     "@turf/turf": "^6.5.0",
     "core-js": "^3.25.3",
     "leaflet": "^1.9.4",
+    "leaflet-routing-machine": "^3.2.12",
     "nuxt": "^2.15.8",
     "nuxt-leaflet": "^0.0.27",
     "v-viewer": "^1.6.4",
