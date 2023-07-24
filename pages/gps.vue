@@ -1,51 +1,48 @@
 <template>
   <div>
-    <!-- <h1>Posición Geográfica Actual</h1>
-    <p>Latitud: <span id="latitud"></span></p>
-    <p>Longitud: <span id="longitud"></span></p> -->
-
-    <div>
-      <span v-if="$geolocation.loading">Loading location...</span>
-      <span v-else-if="!$geolocation.supported"
-        >Geolocation API is not supported</span
-      >
-      <span v-else
-        >Range from destination: {{ inRange ? "Allowed" : "Disallowed" }}
-
-
-
-
-        </span>
-    </div>
-   <p> GPS:{{$geolocation.loading  ? "Si" : "No"}}</p>
-   <p>LAT: {{$geolocation.latitude}}</p>
-
+    <p v-if="hasGeolocationPermission">GPS: Si</p>
+    <p v-else>GPS: No</p>
+    <p v-if="latitude">LAT: {{ latitude }}</p>
   </div>
 </template>
-
-
-
-
 
 <script>
 export default {
   layout: "Default",
 
-  computed: {
-    inRange() {
-      const coords = this.$geolocation.coords;
-    //   if (!coords) return "?";
-    //   return distanceFrom(coords, this.destination) > 150;
+  data() {
+    return {
+      hasGeolocationPermission: false,
+      latitude: null,
+      longitude: null,
+    };
+  },
+
+  methods: {
+    comprobacion() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            this.hasGeolocationPermission = true;
+            this.latitude = position.coords.latitude;
+            this.longitude = position.coords.longitude;
+            console.log(
+              `Latitude: ${this.latitude}, Longitude: ${this.longitude}`
+            );
+          },
+          (error) => {
+            this.hasGeolocationPermission = false;
+            console.error("Error en getCurrentPosition:", error);
+          }
+        );
+      } else {
+        console.log("Geolocation is not supported by this browser.");
+      }
     },
   },
 
-    watch: {
-    inRange(reached) {
-      if (reached !== true) return
-      console.log('Congratulations, you arrived')
-      this.$geolocation.watch = false // Stop watching location
-    }
-  }
+  mounted() {
+    this.comprobacion();
+  },
 };
 </script>
-
