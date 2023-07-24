@@ -56,19 +56,25 @@ export default {
   ],
 
   router: {
+   // middleware: 'geolocationMiddleware',
     extendRoutes(routes, resolve) {
       routes.push(
-
         {
+          name: 'gps-details',
           path: '/:lat/:lon',
-          component: resolve(__dirname, "components/osm.vue"),
+          component: resolve(__dirname, 'components/osm.vue'),
           validate: {
             lat: /^\d+(\.\d+)?$/,
             lon: /^\d+(\.\d+)?$/
           }
+        },
+        {
+          name: 'gps',
+          path: '/gps',
+          component: resolve(__dirname, 'pages/gps.vue')
         }
       );
-    },
+    }
   },
 
   routes: [],

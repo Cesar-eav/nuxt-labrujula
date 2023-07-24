@@ -1,9 +1,16 @@
 <template>
   <div>
+
     <p v-if="hasGeolocationPermission">GPS: Si</p>
     <p v-else>GPS: No</p>
     <p v-if="latitude">LAT: {{ latitude }}</p>
-  </div>
+    <p v-if="longitude">LAT: {{ longitude }}</p>
+
+
+
+
+
+    </div>
 </template>
 
 <script>
