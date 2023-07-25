@@ -51,7 +51,9 @@ export default {
     { src: "@/plugins/vue-infinite-loading", mode: "client" },
     { src: "@/plugins/v-viewer", mode: "client" },
     { src: "@/plugins/leaflet.js", mode: "client", srr: false },
-    { src: '@/plugins/ga.js', mode: 'client'}
+    { src: '@/plugins/ga.js', mode: 'client'},
+    { src: '~/plugins/leaflet-routing-machine', mode: 'client' }
+
 
   ],
 
@@ -94,7 +96,6 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     "nuxt-leaflet",
     'vue-geolocation-api/nuxt',
