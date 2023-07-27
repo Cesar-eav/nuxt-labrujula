@@ -12,3 +12,4 @@ export default ({ app }) => {
       gtag('config', 'G-RCZ6EYBXLP', { page_path: to.fullPath })
     })
   }
+  
