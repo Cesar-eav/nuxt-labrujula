@@ -54,6 +54,7 @@ export default {
     { src: '@/plugins/ga.js', mode: 'client'},
     { src: '@/plugins/leaflet-routing-machine.client', mode: 'client' },
     { src: "@/plugins/turf.js", mode: "client" }
+    { src: "@/plugins/leaflet-routing-machine.client.js", mode: "client" }
 
 
   ],
