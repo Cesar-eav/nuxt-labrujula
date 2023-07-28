@@ -52,10 +52,9 @@ export default {
     { src: "@/plugins/v-viewer", mode: "client" },
     { src: "@/plugins/leaflet.js", mode: "client", srr: false },
     { src: '@/plugins/ga.js', mode: 'client'},
-    //{ src: '~/plugins/leaflet-routing-machine', mode: 'client' }
-    { src: '@/plugins/leaflet-routing-machine.client', mode: 'client' },
-    { src: "@/plugins/turf.js", mode: "client" }
-    { src: "@/plugins/leaflet-routing-machine.client.js", mode: "client" }
+    { src: '~/plugins/leaflet-routing-machine.js', mode: 'client' },
+    //{ src: '@/plugins/leaflet-routing-machine.client', mode: 'client' },
+    { src: "@/plugins/turf.js", mode: "client" },
 
 
   ],
