@@ -22,7 +22,6 @@
     "nuxt-leaflet": "^0.0.27",
     "v-viewer": "^1.6.4",
     "vue": "^2.7.10",
-    "vue-geolocation-api": "^0.1.21",
     "vue-infinite-loading": "^2.4.5",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10",
