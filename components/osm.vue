@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <div>
     <div>
     <p v-if="hasGeolocationPermission">GPS: Si</p>
@@ -42,7 +42,7 @@
 //import { LMap, LTileLayer, LMarker, LPopup } from 'vue2-leaflet';
 
 import { LRoutingMachineControl } from "nuxt-leaflet";
-import { point, distance, lineString, featureCollection } from "@turf/turf";
+//import { point, distance, lineString, featureCollection } from "@turf/turf";
 
 
 export default {
@@ -179,4 +179,4 @@ export default {
     },
   },
 };
-</script> -->
+</script>
