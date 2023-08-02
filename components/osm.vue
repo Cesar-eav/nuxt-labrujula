@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <div>
     <p v-if="hasGeolocationPermission">GPS: Si</p>
@@ -179,4 +179,4 @@ export default {
     },
   },
 };
-</script>
+</script> -->
