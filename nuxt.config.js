@@ -99,7 +99,7 @@ export default {
     "@nuxtjs/axios",
     "nuxt-leaflet",
     //'vue-geolocation-api/nuxt',
-    '@nuxtjs/proxy'
+    //'@nuxtjs/proxy'
     
 
   ],
