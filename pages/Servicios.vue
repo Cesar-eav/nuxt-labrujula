@@ -71,8 +71,8 @@
         <div class="bg-red-400 rounded-lg p-4 flex flex-col justify-center items-center">
 <i class='fas fa-tools fa-3x'></i>
             <p class="font-bold">Talleres de Bicicletas</p>
-            <a href="https://www.mikebikes.cl/" target="_blank"><li>Bicium</li></a>
-            <a href="https://www.bicium.cl/" target="_blank"><li>Mike Bikes</li></a>
+            <a href="https://www.bicium.cl/" target="_blank"><li>Bicium</li></a>
+            <a href="https://www.mikebikes.cl/" target="_blank"><li>Mike Bikes</li></a>
   
         </div>
 
