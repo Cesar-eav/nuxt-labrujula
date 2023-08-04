@@ -15,6 +15,7 @@ export default {
       { hid: "description", name: "description", content: "Valparaiso, murales, escaleras, ascensores, street art, cerro alegre, cerro concepción." },
       { name: 'keywords', content: 'Valparaíso, murales, street art, ascensor artilleria, ascensores, cerro concepción, cerro alegre' },
       { name: "format-detection", content: "telephone=no" },
+      { name: "google-site-verification", content:"xUKYs86x5b6yPL3Qt4L1nvryTq-lQTSNySC15vh8rJA"} 
 
     ],
     link: [
