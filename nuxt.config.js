@@ -51,7 +51,7 @@ export default {
     { src: "@/plugins/v-viewer", mode: "client" },
     { src: "@/plugins/leaflet.js", mode: "client", srr: false },
     { src: '@/plugins/ga.js', mode: 'client'},
-    { src: '@/plugins/leaflet-routing.js', mode: 'client', ssr: false },
+    //{ src: '@/plugins/leaflet-routing.js', mode: 'client', ssr: false },
 
 
 
