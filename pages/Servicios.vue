@@ -76,6 +76,18 @@
   
         </div>
 
+        <div class="bg-red-400 rounded-lg p-4 flex flex-col justify-center items-center">
+          <i class="fas fa-book fa-3x"></i>
+            <p class="font-bold">Bibliotecas</p>
+            <a href="https://www.bibliotecaseverin.gob.cl/" target="_blank"><li>Santiago Severin</li></a>
+            <a href="" target="_blank"><li>Playa Ancha</li></a>
+            <a href="https://www.instagram.com/libroalegre/" target="_blank"><li>ONG Libro Alegre</li></a>
+            <a href="https://bibliometro.cl/noticias/?etiqueta=BiblioValpo" target="_blank"><li>Biblio Metro</li></a>
+            <a href="https://www.bcn.cl/catalogo" target="_blank"><li>Biblioteca del Congreso</li></a>
+           <li>Biblioteca Municipal Rotaría</li>
+  
+        </div>
+
       </div>
     </div>
   </div>
