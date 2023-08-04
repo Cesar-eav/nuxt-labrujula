@@ -19,6 +19,8 @@ export default {
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon-16x16.png" },
+      { rel: 'canonical', href: 'labrujula.tk' },
+
       {
         rel: "stylesheet",
         href: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css",
@@ -27,17 +29,14 @@ export default {
         rel: 'stylesheet',
         href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css',
       },
+      { rel: 'stylesheet', href: 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' },
     ],
     script: [
-      {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js",
-      },
-      {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js",
-      },
-      {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css",
-      },
+      {src: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js", },
+      {src: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js", },
+      {src: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css",},
+      { src: 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.js', type: 'text/javascript' },
+      { src: 'https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js', type: 'text/javascript' },
       
     ],
   },
@@ -52,13 +51,15 @@ export default {
     { src: "@/plugins/v-viewer", mode: "client" },
     { src: "@/plugins/leaflet.js", mode: "client", srr: false },
     { src: '@/plugins/ga.js', mode: 'client'},
-    { src: '@/plugins/leaflet-routing-machine.js', mode: 'client' },
-    //{ src: "@/plugins/turf.js", mode: "client" },
+    { src: '@/plugins/leaflet-routing.js', mode: 'client', ssr: false },
+
+
 
   ],
 
   router: {
-   // middleware: 'geolocationMiddleware',
+    mode: 'history',
+    
     extendRoutes(routes, resolve) {
       routes.push(
         {
@@ -96,13 +97,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+
     "@nuxtjs/axios",
     "nuxt-leaflet",
-    //'vue-geolocation-api/nuxt',
-    //'@nuxtjs/proxy'
-    
 
   ],
+  
 
   geolocation:  {
     watch: true,
