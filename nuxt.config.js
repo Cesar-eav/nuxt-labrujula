@@ -35,7 +35,6 @@ export default {
     script: [
       {src: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js", },
       {src: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js", },
-      {src: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css",},
       { src: 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.js', type: 'text/javascript' },
       { src: 'https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js', type: 'text/javascript' },
       
@@ -52,7 +51,7 @@ export default {
     { src: "@/plugins/v-viewer", mode: "client" },
     { src: "@/plugins/leaflet.js", mode: "client", srr: false },
     { src: '@/plugins/ga.js', mode: 'client'},
-    //{ src: '@/plugins/leaflet-routing.js', mode: 'client', ssr: false },
+    { src: '@/plugins/leaflet-routing-machine.js', mode: 'client', ssr: false },
 
 
 
@@ -86,10 +85,9 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["leaflet/dist/leaflet.css"],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: true, 
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
