@@ -15,10 +15,13 @@ export default {
       { hid: "description", name: "description", content: "Valparaiso, murales, escaleras, ascensores, street art, cerro alegre, cerro concepción." },
       { name: 'keywords', content: 'Valparaíso, murales, street art, ascensor artilleria, ascensores, cerro concepción, cerro alegre' },
       { name: "format-detection", content: "telephone=no" },
+      { name: "google-site-verification", content:"xUKYs86x5b6yPL3Qt4L1nvryTq-lQTSNySC15vh8rJA"} 
 
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon-16x16.png" },
+      { rel: 'canonical', href: 'labrujula.tk' },
+
       {
         rel: "stylesheet",
         href: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css",
@@ -27,17 +30,13 @@ export default {
         rel: 'stylesheet',
         href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css',
       },
+      { rel: 'stylesheet', href: 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' },
     ],
     script: [
-      {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js",
-      },
-      {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js",
-      },
-      {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css",
-      },
+      {src: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js", },
+      {src: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js", },
+      { src: 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.js', type: 'text/javascript' },
+      { src: 'https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js', type: 'text/javascript' },
       
     ],
   },
@@ -51,12 +50,16 @@ export default {
     { src: "@/plugins/vue-infinite-loading", mode: "client" },
     { src: "@/plugins/v-viewer", mode: "client" },
     { src: "@/plugins/leaflet.js", mode: "client", srr: false },
-    { src: '@/plugins/ga.js', mode: 'client'}
+    { src: '@/plugins/ga.js', mode: 'client'},
+    { src: '@/plugins/leaflet-routing-machine.js', mode: 'client', ssr: false },
+
+
 
   ],
 
   router: {
-   // middleware: 'geolocationMiddleware',
+    mode: 'history',
+    
     extendRoutes(routes, resolve) {
       routes.push(
         {
@@ -82,10 +85,9 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["leaflet/dist/leaflet.css"],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: true, 
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
@@ -94,14 +96,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
+
     "@nuxtjs/axios",
     "nuxt-leaflet",
-    'vue-geolocation-api/nuxt',
-    '@nuxtjs/proxy'
-    
 
   ],
+  
 
   geolocation:  {
     watch: true,
