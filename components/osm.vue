@@ -141,7 +141,7 @@ export default {
         // Configuramos L.Routing.control con los waypoints
         L.Routing.control({
           waypoints: this.waypoints,
-          routeWhileDragging: true,
+          routeWhileDragging: false,
         }).addTo(map);
       }
     },
