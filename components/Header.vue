@@ -104,7 +104,7 @@
             </li>
             <li>
               <a href="/centrosculturales" class="menuPrincipal"
-                >Centros Culturales</a
+                >Cultura</a
               >
             </li>
             <li>

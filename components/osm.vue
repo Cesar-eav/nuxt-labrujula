@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div>
+    <p v-if="hasGeolocationPermission">GPS: Si</p>
+    <p v-else>GPS: No</p>
+    <p v-if="latitude">LAT: {{ latitude }}</p>
+  </div>
     <div id="map-wrap" style="height: 80vh">
       <ClientOnly>
         <l-map v-if="this.waypoints.length === 2" ref="map" :zoom="15" :center="[routeParams.lat, routeParams.lon]" @ready="onMapReady">
@@ -29,6 +34,7 @@
 
       </ClientOnly>
 
+      </ClientOnly>
     </div>
 
   </div>
@@ -43,6 +49,7 @@ export default {
 
   data() {
     return {
+      isClient: false,
       isClient: false,
       zoom: 13,
       tileLayerUrl: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
