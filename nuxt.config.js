@@ -35,10 +35,6 @@ export default {
     script: [
       {src: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js", },
       {src: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js", },
-<<<<<<< HEAD
-=======
-      {src: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css",},
->>>>>>> 736f06e8c2c51e8b4d55c242dc698b8f4d42574f
       { src: 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.js', type: 'text/javascript' },
       { src: 'https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js', type: 'text/javascript' },
       
@@ -55,13 +51,7 @@ export default {
     { src: "@/plugins/v-viewer", mode: "client" },
     { src: "@/plugins/leaflet.js", mode: "client", srr: false },
     { src: '@/plugins/ga.js', mode: 'client'},
-<<<<<<< HEAD
     { src: '@/plugins/leaflet-routing-machine.js', mode: 'client', ssr: false },
-=======
-    //{ src: '@/plugins/leaflet-routing.js', mode: 'client', ssr: false },
->>>>>>> 736f06e8c2c51e8b4d55c242dc698b8f4d42574f
-
-
 
   ],
 

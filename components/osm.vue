@@ -1,10 +1,5 @@
 <template>
   <div>
-    <div>
-    <p v-if="hasGeolocationPermission">GPS: Si</p>
-    <p v-else>GPS: No</p>
-    <p v-if="latitude">LAT: {{ latitude }}</p>
-  </div>
     <div id="map-wrap" style="height: 80vh">
       <ClientOnly>
         <l-map v-if="this.waypoints.length === 2" ref="map" :zoom="15" :center="[routeParams.lat, routeParams.lon]" @ready="onMapReady">
@@ -31,8 +26,6 @@
             :waypoints="waypoints"></l-routing-machine-control>
 
         </l-map>
-
-      </ClientOnly>
 
       </ClientOnly>
     </div>
