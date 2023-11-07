@@ -1,5 +1,8 @@
 <template>
   <div>
+<div>
+    <p v-if="this.hasGeolocationPermission==false" class="p-2"> Debes activar el GPS</p>
+  </div>
     <div id="map-wrap" style="height: 80vh">
       <ClientOnly>
         <l-map v-if="this.waypoints.length === 2" ref="map" :zoom="15" :center="[routeParams.lat, routeParams.lon]" @ready="onMapReady">
