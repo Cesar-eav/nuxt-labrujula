@@ -65,6 +65,15 @@ export default {
       baseurl: process.env.baseURL,
     };
   },
+
+  head (){
+    return {
+      title: 'Plazas',
+      meta: [
+       {name: 'description', content: 'Plaza Victoria, Plaza Echaurren, Plaza Ohiggins, Parque Italia'}
+      ]
+    }
+  },
   components: {
     ModalComponent,
   },

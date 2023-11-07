@@ -67,6 +67,17 @@ export default {
       baseurl: process.env.baseURL,
     };
   },
+
+  head (){
+    return {
+      title: 'Arquitectura de Valparaíso',
+      meta: [
+       {name: 'description', content: 'Arquitectura, edificios, Palacio Baburizza'}
+      ]
+    }
+  },
+
+  
   components: {
     ModalComponent,
   },

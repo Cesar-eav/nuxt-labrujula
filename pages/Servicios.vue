@@ -111,6 +111,15 @@ export default {
       baseurl: process.env.baseURL,
     };
   },
+
+  head (){
+    return {
+      title: 'Servicios',
+      meta: [
+       {name: 'description', content: 'Baños, información turística, bibliotecas'}
+      ]
+    }
+  },
   components: {
     ModalComponent,
   },

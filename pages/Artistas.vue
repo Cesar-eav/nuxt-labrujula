@@ -62,6 +62,15 @@ export default {
     }
   },
 
+  head (){
+    return {
+      title: 'Artistas y muralistas',
+      meta: [
+       {name: 'description', content: 'Al Samir, A la Pinta, Allan Halley, Anis,Camilo Pinto Paredes, Giova, un.jotape'}
+      ]
+    }
+  },
+
     mounted() {
     this.listArtists()
   },

@@ -25,8 +25,10 @@
             </l-popup>
 
           </l-marker>
-          <l-routing-machine-control v-if="userLocation && waypoints.length === 2"
-            :waypoints="waypoints"></l-routing-machine-control>
+          <l-routing-machine-control 
+            v-if="userLocation && waypoints.length === 2"
+            :waypoints="waypoints">
+          </l-routing-machine-control>
 
         </l-map>
 

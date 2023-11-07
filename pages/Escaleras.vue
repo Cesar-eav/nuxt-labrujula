@@ -64,6 +64,16 @@ export default {
     };
   },
 
+  
+  head (){
+    return {
+      title: 'Escaleras',
+      meta: [
+       {name: 'description', content: 'Escalera de Piano, Escalera de colores, escalera calle 13'}
+      ]
+    }
+  },
+
   components: {
     ModalComponent,
   },

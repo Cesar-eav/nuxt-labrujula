@@ -63,6 +63,16 @@ export default {
       baseurl: process.env.baseURL,
     };
   },
+
+  head (){
+    return {
+      title: 'Iglesias de Valparaíso',
+      meta: [
+       {name: 'description', content: 'Iglesia La Matriz, Iglesia San Francisco, Iglesia Luterana'}
+      ]
+    }
+  },
+
   components: {
     ModalComponent,
   },

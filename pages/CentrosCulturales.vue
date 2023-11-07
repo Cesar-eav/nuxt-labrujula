@@ -85,6 +85,16 @@ export default {
     };
   },
 
+
+  head (){
+    return {
+      title: 'Centros Culturales',
+      meta: [
+       {name: 'description', content: 'Museo Maritimo Nacional, Parque Cultural de Valparaíso, Insomnia - Teatro Condell, Espacio La Compañía '}
+      ]
+    }
+  },
+
   components: {},
 
   mounted() {

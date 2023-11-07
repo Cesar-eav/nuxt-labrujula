@@ -65,6 +65,15 @@ export default {
       baseurl: process.env.baseURL,
     };
   },
+
+  head (){
+    return {
+      title: 'Miradores',
+      meta: [
+       {name: 'description', content: 'Miradores de Valparaíso, paseo 21 de mayo'}
+      ]
+    }
+  },
   components: {
     ModalComponent,
   },

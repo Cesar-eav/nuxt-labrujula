@@ -64,6 +64,16 @@ export default {
     };
   },
 
+
+  head (){
+    return {
+      title: 'Bares de Valparaíso',
+      meta: [
+       {name: 'description', content: 'Liberty, Cinzano, Roland Bar, El Bar Inglés'}
+      ]
+    }
+  },
+
   components: {
     ModalComponent,
   },
